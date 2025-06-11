@@ -23,3 +23,4 @@ packages:
 - name: go-task/task@v3.44.0
 - name: ahmetb/kubectx@v0.9.5
 - name: ahmetb/kubectx/kubens@v0.9.5
+- name: tofuutils/tenv@v4.7.1
