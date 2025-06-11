@@ -143,4 +143,4 @@ tasks:
       - defer: rm {{.ON_ERROR}}
       - cmd: git reset --mixed origin/HEAD
         ignore_error: true
-      - task: _git:status
+      #- task: _git:status
