@@ -53,3 +53,29 @@ aqua $ task ag
 - .direnv と .env で GitHub token を設定
   - https://blog.p1ass.com/posts/direnv-dotenv/
 - [Tips｜aqua CLI Version Manager 入門](https://zenn.dev/shunsuke_suzuki/books/aqua-handbook/viewer/tips#github_token%2C-aqua_github_token-%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%A6-rate-limit-%E3%82%92%E5%9B%9E%E9%81%BF%E3%81%99%E3%82%8B)
+
+## Taskfileとの連携
+チームで使う場合と個人で使う場合は、以下のようにincludesにチーム用のTaskfileを読み込んで利用する。
+https://taskfile.dev/usage/#including-other-taskfiles
+```yml
+# Taskfile.yml
+includes:
+  tests: ${HOME}/Taskfile.dist.yml
+
+env:
+  GREETING: Hey, there!
+
+tasks:
+  greet:
+    cmds:
+      - echo $GREETING
+```
+呼び出し
+```bash
+# Taskfile.dist.yml
+task tests:au
+task tests:ag
+
+# Taskfile.yml
+task greet
+```
