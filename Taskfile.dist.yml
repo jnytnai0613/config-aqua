@@ -125,13 +125,13 @@ tasks:
       - sleep 1
       - gh pr merge "{{.BRANCH}}" --auto -s
 
-  _git:status:
-    internal: true
-    silent: true
-    cmds:
-      - git plog -5
-        # see https://github.com/officel/config_git/blob/main/config#L21
-      - git status --short --branch
+  #_git:status:
+  #  internal: true
+  #  silent: true
+  #  cmds:
+  #    - git plog -5
+  #      # see https://github.com/officel/config_git/blob/main/config#L21
+  #    - git status --short --branch
 
   _git:on_error:
     internal: true
