@@ -144,3 +144,4 @@ tasks:
       - cmd: git reset --mixed origin/HEAD
         ignore_error: true
       #- task: _git:status
+      - git switch main
