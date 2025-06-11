@@ -77,7 +77,7 @@ tasks:
           TITLE:
             sh: echo "bump:" "aqua up at $(date -I date) {{.CLI_ARGS}}"
           BRANCH:
-            sh: echo "bump/aqua_up/$(date -I)"
+            sh: echo "bump/aqua_up/$(date -I date)"
           TARGET: "aqua.yaml"
 
   _git:
