@@ -22,3 +22,4 @@ packages:
 - name: kubecolor/kubecolor@v0.5.1
 - name: go-task/task@v3.44.0
 - name: ahmetb/kubectx@v0.9.5
+- name: ahmetb/kubectx/kubens@v0.9.5
