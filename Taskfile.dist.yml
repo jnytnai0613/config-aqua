@@ -99,7 +99,6 @@ tasks:
         vars:
           TITLE: "{{.TITLE}}"
           BRANCH: "{{.BRANCH}}"
-      #- task: _git:status
       - rm {{.ON_ERROR}}
 
   _git:auto:
@@ -124,14 +123,8 @@ tasks:
       - gh pr create -t "{{.TITLE}}" -b "" -l "" -H "{{.BRANCH}}" -B "main"
       - sleep 1
       - gh pr merge "{{.BRANCH}}" --auto -s
-
-  #_git:status:
-  #  internal: true
-  #  silent: true
-  #  cmds:
-  #    - git plog -5
-  #      # see https://github.com/officel/config_git/blob/main/config#L21
-  #    - git status --short --branch
+      - git switch main
+      - git fetch
 
   _git:on_error:
     internal: true
@@ -143,5 +136,3 @@ tasks:
       - defer: rm {{.ON_ERROR}}
       - cmd: git reset --mixed origin/HEAD
         ignore_error: true
-      #- task: _git:status
-      - git switch main
