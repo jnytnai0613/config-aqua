@@ -24,3 +24,4 @@ packages:
 - name: ahmetb/kubectx@v0.9.5
 - name: ahmetb/kubectx/kubens@v0.9.5
 - name: tofuutils/tenv@v4.7.1
+- name: 1password/cli@v2.31.1
