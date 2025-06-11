@@ -124,7 +124,7 @@ tasks:
       - sleep 1
       - gh pr merge "{{.BRANCH}}" --auto -s
       - git switch main
-      - git fetch
+      - git pull origin main
 
   _git:on_error:
     internal: true
