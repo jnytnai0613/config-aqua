@@ -99,7 +99,7 @@ tasks:
         vars:
           TITLE: "{{.TITLE}}"
           BRANCH: "{{.BRANCH}}"
-      - task: _git:status
+      #- task: _git:status
       - rm {{.ON_ERROR}}
 
   _git:auto:
