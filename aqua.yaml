@@ -15,7 +15,6 @@ packages:
 - name: hashicorp/terraform@v1.12.2
 - name: cli/cli@v2.74.2
 - name: terraform-docs/terraform-docs@v0.20.0
-- name: aws/aws-cli@2.27.39
 - name: x-motemen/ghq@v1.8.0
 - name: peco/peco@v0.5.11
 - name: gruntwork-io/terragrunt@v0.81.8
